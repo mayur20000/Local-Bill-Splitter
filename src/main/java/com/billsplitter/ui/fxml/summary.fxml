@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.billsplitter.ui.controller.SummaryController" spacing="10">
+    <TableView fx:id="summaryTable">
+        <columns>
+            <TableColumn text="User" fx:id="userColumn"/>
+            <TableColumn text="Total Paid" fx:id="paidColumn"/>
+            <TableColumn text="Total Owed" fx:id="owedColumn"/>
+            <TableColumn text="Balance" fx:id="balanceColumn"/>
+        </columns>
+    </TableView>
+    <Button text="Export PDF" onAction="#exportPDF"/>
+</VBox>

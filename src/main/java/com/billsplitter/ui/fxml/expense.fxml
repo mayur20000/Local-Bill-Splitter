@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.billsplitter.ui.controller.ExpenseController" spacing="10">
+    <TextField fx:id="expenseTitleField" promptText="Expense Title"/>
+    <TextField fx:id="amountField" promptText="Amount"/>
+    <ComboBox fx:id="paidByCombo" promptText="Paid By"/>
+    <ComboBox fx:id="groupCombo" promptText="Select Group"/>
+    <CheckBox fx:id="equalSplitCheck" text="Split Equally"/>
+    <VBox fx:id="customSplitPane" visible="false" managed="false">
+        <TextField fx:id="customAmountField" promptText="Custom Amount"/>
+        <ComboBox fx:id="customUserCombo" promptText="Select User"/>
+        <Button text="Add Custom Share" onAction="#addCustomShare"/>
+    </VBox>
+    <Button text="Add Expense" onAction="#addExpense"/>
+</VBox>
